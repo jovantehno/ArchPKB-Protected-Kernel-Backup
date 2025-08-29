@@ -1,0 +1,13 @@
+[Trigger]
+Type = Path
+Target = /usr/lib/modules/*/vmlinuz*
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+
+
+[Action]
+Description = Backup latest kernel to ESP and prune old ones (PKB)
+When = PostTransaction
+# Set COPY_FALLBACK=1 if you really want to include initrd-fallback
+Exec = /usr/bin/env PKB_VERBOSE=1 COPY_FALLBACK=0 /usr/local/bin/protected-kernel-backup.sh

@@ -36,7 +36,7 @@ Works with: **systemd‑boot**, **kernel‑install**, **dracut**. ESP expected a
 
 ```bash
 # Clone
-git clone https://github.com/yourname/pkb.git
+git clone https://github.com/jovantehno/ArchPKB-Protected-Kernel-Backup.git
 cd pkb
 
 # Install script places files in standard locations
